@@ -16,6 +16,16 @@ $middelpuntbuiten = bepaalMidden($xlinks, $xrechts);
 r();
 echo "HET NIEUWE VERSCHIL IS:(".verschilBerekenen($middelpuntbuiten).")";
 r();
+//echo tolerantieCheck(0.0000000000001);
+echo "TOLERANTIE".tolerantieCheck(verschilBerekenen($middelpuntbuiten));
+r();
+function tolerantieCheck($hetverschil){
+    if($hetverschil < -0.000001 || $hetverschil > 0.000001){
+        return "false";
+    }else{
+        return "true";
+    }
+}
 
 
 function verschilBerekenen($getal){
