@@ -2,16 +2,20 @@
 $xlinks = 4;
 $xrechts = 5;
 
-
-//function{
-//verschilBerekenen(links)*verschilBereken(rechts) < 0
-//}
-
 if((verschilBerekenen($xlinks) * verschilBerekenen($xrechts))<0){
     echo "interval is bruikbaar";
 }else{
     echo "interval is onbruikbaar";
 }
+function bepaalMidden ($xlinks, $xrechts){
+    $middelpuntbinnen = ($xrechts-$xlinks)/2 + $xlinks;
+    return $middelpuntbinnen;
+}
+
+$middelpuntbuiten = bepaalMidden($xlinks, $xrechts);
+r();
+echo "HET NIEUWE VERSCHIL IS:(".verschilBerekenen($middelpuntbuiten).")";
+r();
 
 
 function verschilBerekenen($getal){
@@ -52,6 +56,8 @@ echo "Groen met vijf".berekenGroen($xrechts);
 //function (links rechts) //beide uitrekenen // dan verschil tussen // push naar array
 
 
-
+function r(){
+    echo "<br><br>";
+}
 
 ?>
